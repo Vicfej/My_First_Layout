@@ -50,8 +50,9 @@ button:hover{
 button{
     background-color: #0088a9;
     border: none;
-    padding: 5px;
+    padding: 10px;
     border-radius: 25px;
+    color: #ffffff;
 } 
  #profile img{
     height: 305px;
@@ -110,9 +111,6 @@ p{
     margin-left: 0%;
     color: none;
 }
-.card-content >h3{
-    background-color:
-}
 .wrapper{
     position: absolute;
     transform: translateY(-5%);
@@ -165,13 +163,18 @@ p{
     color: #000000;
 }
 .button{
-    background: #000000;
+    background-color: #000000;
     text-align: center;
     padding: 15px;
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
     text-transform: uppercase;
+}
+.button:hover{
+    background-color: #0088a9;
+    color: #ffffff;
+    transition: all 0.5 ease;
 }
 @media screen and (max-width: 600px){
     .contact-form{
@@ -184,25 +187,48 @@ p{
         width: 100%;
     }
 }
+@media screen and (max-width: 600px){
+    .logo{
+        max-width: 100%;
+        height: auto;
+    }
+    .card{
+        flex-direction: row;
+    }
+}
+
 footer{
     display: flex;
-    flex-direction: column;
-    bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    /* padding-top: 20px; */
+    width: 800px;
 }
  .footer{
-    background-color: #c4c4c4;
+    background-color: #0088a9;
     box-sizing: border-box;
     width: 100%;
-    padding: 10px 15px 15px;
+    /* padding: 10px 15px 15px; */
 }
 h4{
-    color: #ffffff;
-
+    color: #000000;
+    display: flex;
 } 
-.footer-right{
-    grid-template-columns: repeat(auto-fill, minmax(225px,1fr));
-    gap: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+.footer-links li{
+ display: inline-block;
+justify-content: space-evenly;
+margin: 25px;
+} 
+.footer-links > li a:first-of-type{
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.footer-links > li a:hover{
+    transition: all 0.5s ease;
+    color: black;
+}
+.icons{
+    position: relative;
+    margin: 3px;
 }
